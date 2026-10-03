@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "doom-esn"
+version = "0.1.0"
+description = "Echo-state-network (reservoir) agent for ViZDoom with state-collapse diagnostics"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "gymnasium>=0.29",
+  "pyyaml>=6",
+  "cma>=3.3",
+]
+
+[project.optional-dependencies]
+doom = ["vizdoom>=1.2"]
+ppo = ["stable-baselines3>=2.3"]
+dev = ["pytest>=8", "pytest-cov", "ruff", "mypy", "types-PyYAML", "pre-commit"]
+
+[project.scripts]
+doom-esn = "doom_esn.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/doom_esn"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["doom: needs the ViZDoom engine (skipped if not installed)"]
+filterwarnings = ["error::RuntimeWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/doom_esn/credence_stats.py" = ["ALL"]
+"scripts/*.py" = ["N816", "E501", "E741", "E731", "B007", "RUF005", "SIM", "UP", "I", "F"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "SIM", "NPY", "RUF"]
+ignore = ["N803", "N806"]  # capital W / X are standard maths notation
+
+[tool.mypy]
+python_version = "3.10"
+disallow_untyped_defs = true
+no_implicit_optional = true
+warn_unused_ignores = true
+warn_return_any = false
+files = ["src"]
+exclude = ["credence_stats\\.py"]
+
+[[tool.mypy.overrides]]
+module = ["scipy.*", "vizdoom.*", "cma.*"]
+ignore_missing_imports = true

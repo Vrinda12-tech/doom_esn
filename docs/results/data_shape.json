@@ -1,0 +1,71 @@
+{
+  "n_steps": 6000,
+  "n_episodes": 118,
+  "mean_episode_len": 50.847457627118644,
+  "input_shape": {
+    "dim": 768,
+    "erank": 17.274907696835243,
+    "pr": 7.315187537480642,
+    "k90": 25,
+    "k99": 187,
+    "top5_var_frac": [
+      0.2604322994314482,
+      0.21435699993390486,
+      0.1154710264375478,
+      0.0679664708521884,
+      0.037433705310816336
+    ]
+  },
+  "next_frame_skill_vs_window": {
+    "W=1": 0.6739874464912845,
+    "W=2": 0.8041895180009513,
+    "W=4": 0.8257429685390871,
+    "W=8": 0.832393656675215,
+    "W=16": 0.8394242622003516,
+    "persistence": 0.3574571785465894,
+    "reservoir(400)": 0.7091892646634509,
+    "reservoir(400)+action": 0.712276834834719
+  },
+  "reservoir_state_shape": {
+    "erank": 27.39859030387129,
+    "pr": 10.10663167631421,
+    "k90": 50,
+    "saturation_frac_abs_gt_0.9": 0.1040825
+  },
+  "fixed_points_from_real_frames": {
+    "n_inputs": 120,
+    "solver_failures": 5,
+    "kinds": {
+      "stable": 115,
+      "saddle": 0,
+      "unstable": 0
+    },
+    "radius_median": 0.7643050005154377,
+    "radius_max": 0.854136712097149,
+    "mean_unstable_dirs": 0.0
+  },
+  "fixed_point_blank_input": null,
+  "multistability_25_random_starts_one_input": {
+    "converged": 21,
+    "distinct_fixed_points": 1
+  },
+  "along_trajectory_local_radius": {
+    "median": 0.7816591423287492,
+    "max": 0.8909092993991249,
+    "frac_gt_1": 0.0,
+    "n": 145
+  },
+  "fixed_point_seconds": 31.3,
+  "fitness_noise": {
+    "n_theta": 16,
+    "n_episodes": 12,
+    "within_sd": 164.50244656005097,
+    "sd_of_candidate_means": 39.90396892680114,
+    "reliability_3_episodes": -4.664887385766227,
+    "reliability_12_episodes": -0.4162218464415568,
+    "candidate_mean_return_range": [
+      -326.75,
+      -180.25
+    ]
+  }
+}

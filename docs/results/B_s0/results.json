@@ -1,0 +1,28 @@
+{
+  "reservoir": {
+    "n_res": 400,
+    "spectral_radius": 0.8,
+    "density": 0.05,
+    "input_scaling": 0.3,
+    "bias_scaling": 0.1,
+    "tau": 16.0,
+    "seed": 0
+  },
+  "reservoir_bytes": 1296004,
+  "n_policy_params": 1604,
+  "generations": 20,
+  "heldout_trained": {
+    "mean": -68.23332977294922,
+    "sem": 26.107453897080287
+  },
+  "heldout_random": {
+    "mean": -143.36666870117188,
+    "sem": 32.69466399564865
+  },
+  "eval_state_health": {
+    "n_samples": 1039,
+    "erank": 8.504180052518631,
+    "pr": 4.485971713897836,
+    "cond": 22407936.314935494
+  }
+}

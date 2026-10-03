@@ -1,0 +1,11 @@
+# ViZDoom "basic" scenario, calibrated reservoir, CMA-ES readout. Sized for 8 GB / CPU only.
+name: basic
+env: { env_id: VizdoomBasic-v1, frame_skip: 4, calib_steps: 1500 }
+encoder: { height: 24, width: 32 }
+reservoir: { n_res: 400, density: 0.05, seed: 0 }
+calibration:
+  enabled: true
+  spectral_radii: [0.8, 0.95, 1.1]
+  input_scalings: [0.3, 1.0, 3.0]
+  taus: [4.0, 8.0, 16.0]
+es: { popsize: 16, generations: 20, episodes: 3, sigma0: 0.05, seed: 0, eval_episodes: 30 }

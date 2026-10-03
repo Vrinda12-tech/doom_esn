@@ -1,0 +1,79 @@
+{
+  "origin_saddle_by_tau_rho1.1": [
+    {
+      "tau": 4.0,
+      "a": 0.632,
+      "n_unstable_at_origin": 5,
+      "disc_test_agrees": true,
+      "frac_unstable": 0.0125
+    },
+    {
+      "tau": 8.0,
+      "a": 0.393,
+      "n_unstable_at_origin": 5,
+      "disc_test_agrees": true,
+      "frac_unstable": 0.0125
+    },
+    {
+      "tau": 16.0,
+      "a": 0.221,
+      "n_unstable_at_origin": 3,
+      "disc_test_agrees": true,
+      "frac_unstable": 0.0075
+    }
+  ],
+  "W_eig_max_abs": 1.1000000000350523,
+  "autonomous_blank_input": {
+    "final_step_change_mean": 4.6481884083959815e-07,
+    "state_norm": 6.360901832580566,
+    "conditional_lyapunov": -0.0570849482599695,
+    "fixed_points_found_of_20_starts": 20,
+    "kinds": {
+      "stable": 20,
+      "saddle": 0,
+      "unstable": 0
+    }
+  },
+  "fitness_noise_crn": {
+    "sd_episode_effect": 54.10854457439782,
+    "sd_candidate_effect": 7.092231487673436,
+    "sd_residual": 153.60765850869953,
+    "reliability_k3": 0.006354665849708323,
+    "reliability_k12": 0.024943147299841647,
+    "F_candidate": 1.0255812235263702,
+    "frac_episodes_return_gt_0": 0.19270833333333334,
+    "return_quantiles": [
+      -400.0,
+      -305.0,
+      75.44999999999999
+    ]
+  },
+  "state_dim_from_canonical_correlations": {
+    "n_pairs": 3648,
+    "rho_top12": [
+      0.997,
+      0.992,
+      0.988,
+      0.98,
+      0.962,
+      0.928,
+      0.817,
+      0.813,
+      0.791,
+      0.503,
+      0.458,
+      0.432
+    ],
+    "null_rho_top_max": 0.231,
+    "n_rho_above_null": 18,
+    "cum_predictive_info_nats_at_k": {
+      "1": 2.53,
+      "2": 4.59,
+      "3": 6.47,
+      "4": 8.09,
+      "6": 10.38,
+      "8": 11.47,
+      "12": 12.33
+    }
+  }
+}
